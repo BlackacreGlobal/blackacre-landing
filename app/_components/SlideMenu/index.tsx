@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import "react-horizontal-scrolling-menu/dist/styles.css";
@@ -10,7 +8,13 @@ import usePreventBodyScroll from "../usePreventBodyScroll";
 
 type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
 
-export default function SlideMenu({ items }: { items: MenuItem[] }) {
+export default function SlideMenu({
+  items,
+  setVisibleIndex,
+}: {
+  items: MenuItem[];
+  setVisibleIndex: (index: number) => void;
+}) {
   const { disableScroll, enableScroll } = usePreventBodyScroll();
 
   return (
@@ -18,10 +22,13 @@ export default function SlideMenu({ items }: { items: MenuItem[] }) {
       <div className="example max-w-[100dvw]">
         <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
           <ScrollMenu onWheel={onWheel}>
-            {items.map(({ content, id }) => (
+            {items.map(({ content, id }, i) => (
               <Card
                 itemId={id} // NOTE: itemId is required for track items
                 key={id}
+                nowVisible={(_id) => {
+                  setVisibleIndex(i);
+                }}
               >
                 {content}
               </Card>

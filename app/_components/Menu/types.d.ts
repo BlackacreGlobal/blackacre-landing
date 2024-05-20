@@ -7,4 +7,5 @@ export type MenuItem = {
 
 export interface MenuProps {
   items: MenuItem[];
+  activeMenuIndex: number;
 }

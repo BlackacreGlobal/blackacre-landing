@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Menu from "@/app/_components/Menu";
 import type { MenuItem } from "@/app/_components/Menu/types";
 import SlideMenu from "@/app/_components/SlideMenu";
 import SlideHeader from "@/app/_components/SlideMenu/SlideHeader";
+import { useState } from "react";
 
 export default function Home() {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   const elemPrefix = "test";
   const getId = (index: number) => `${elemPrefix}${index}`;
   const menuItems: MenuItem[] = [
@@ -68,10 +72,10 @@ export default function Home() {
         />
       </div>
       <div className="h-full flex-1">
-        <SlideMenu items={menuItems} />
+        <SlideMenu items={menuItems} setVisibleIndex={setActiveIndex} />
       </div>
       <div className="flex w-full justify-end items-end pb-[10vh] pr-[12vw]">
-        <Menu items={menuItems} />
+        <Menu items={menuItems} activeMenuIndex={activeIndex} />
       </div>
     </main>
   );

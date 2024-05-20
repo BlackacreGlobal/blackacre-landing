@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
 
 export default function Card({
   itemId,
   children,
+  nowVisible,
 }: {
   itemId: string;
   children?: React.ReactNode;
+  nowVisible: (index: string) => void;
 }) {
   const visibility = React.useContext(VisibilityContext);
   const isVisible = visibility.useIsVisible(itemId, true);
+
+  useEffect(() => {
+    nowVisible(itemId);
+  }, [isVisible]);
 
   return (
     <div
