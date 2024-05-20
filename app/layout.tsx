@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-montserrat",
 });
 const awakening = localFont({
   src: "./fonts/AWAKENNING.ttf",
@@ -26,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${awakening.variable}`}>
+      <body className={`${montserrat.className} ${awakening.variable}`}>
         {children}
       </body>
     </html>
