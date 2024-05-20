@@ -26,6 +26,31 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.react-horizontal-scrolling-menu--item:first-child {
+  margin-left: calc(10vw + 1rem);
+}
+
+.react-horizontal-scrolling-menu--item:last-child {
+  margin-right: calc(10vw + 1rem);
+}
+
+.react-horizontal-scrolling-menu--item {
+  display: flex;
+}
+
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
