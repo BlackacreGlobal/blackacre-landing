@@ -6,11 +6,15 @@ import { useState, useEffect } from "react";
 import { MenuProps } from "./types";
 
 export default function Menu({ items, activeMenuIndex }: MenuProps) {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
+  const [isInitial, setIsInitial] = useState<Boolean>(true);
 
   useEffect(() => {
-    setHoveredIndex(activeMenuIndex);
+    if (isInitial && activeMenuIndex == items.length - 1) {
+      setIsInitial(false);
+    } else {
+      setHoveredIndex(activeMenuIndex);
+    }
   }, [activeMenuIndex]);
 
   return (
