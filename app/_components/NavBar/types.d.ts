@@ -3,6 +3,7 @@ export type MenuItem = {
   name: string;
   imgSrc: string;
   content: React.ReactNode;
+  href: string;
 };
 
 export interface MenuProps {

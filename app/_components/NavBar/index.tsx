@@ -22,15 +22,14 @@ export default function NavBar({ items, activeMenuIndex }: MenuProps) {
       {items?.map((item, i) => (
         <Link
           key={i}
-          href="/"
+          href={item.href}
           className="group relative p-2 h-full w-full px-4"
           onMouseEnter={() => setHoveredIndex(i)}
-        // onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === i && (
               <motion.span
-                className="z-0 absolute inset-0 h-full w-full bg-slate-800/[0.8] block rounded-3xl"
+                className="z-0 absolute inset-0 h-full w-full bg-slate-800/[0.6] block rounded-3xl border border-slate-700/50"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{

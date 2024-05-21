@@ -51,6 +51,14 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+.article-content p {
+  @apply min-w-[24rem];
+}
+
+.article-content {
+  @apply px-4;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
