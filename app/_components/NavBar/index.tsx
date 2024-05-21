@@ -2,20 +2,30 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { menuItemUrls } from "@/app/_constants/menu";
 import { useState, useEffect } from "react";
 import { MenuProps } from "./types";
+import { usePathname } from "next/navigation";
 
 export default function NavBar({ items, activeMenuIndex }: MenuProps) {
-  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isInitial, setIsInitial] = useState<Boolean>(true);
+  const [pathIndex, setPathIndex] = useState<number>(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (isInitial && activeMenuIndex == items.length - 1) {
       setIsInitial(false);
     } else {
-      setHoveredIndex(activeMenuIndex);
+      setActiveIndex(activeMenuIndex);
     }
   }, [activeMenuIndex]);
+
+  useEffect(() => {
+    const getPathIndex = menuItemUrls.indexOf(pathname);
+    setActiveIndex(getPathIndex);
+    setPathIndex(getPathIndex);
+  }, [pathname]);
 
   return (
     <nav className="w-fit flex">
@@ -24,10 +34,11 @@ export default function NavBar({ items, activeMenuIndex }: MenuProps) {
           key={i}
           href={item.href}
           className="group relative p-2 h-full w-full px-4"
-          onMouseEnter={() => setHoveredIndex(i)}
+          onMouseEnter={() => setActiveIndex(i)}
+          onMouseLeave={() => setActiveIndex(pathIndex)}
         >
           <AnimatePresence>
-            {hoveredIndex === i && (
+            {activeIndex === i && (
               <motion.span
                 className="z-0 absolute inset-0 h-full w-full bg-slate-800/[0.6] block rounded-3xl border border-slate-700/50"
                 layoutId="hoverBackground"

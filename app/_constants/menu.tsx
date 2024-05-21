@@ -4,12 +4,14 @@ import SlideHeader from "@/app/_components/SlideMenu/SlideHeader";
 const elemPrefix = "test";
 const getId = (index: number) => `${elemPrefix}${index}`;
 
+export const menuItemUrls = ["/", "/about", "/services", "/contact-us"];
+
 export const menuItems: MenuItem[] = [
   {
     id: getId(0),
     name: "HOME",
     imgSrc: "",
-    href: "/",
+    href: menuItemUrls[0],
     content: (
       <div className="flex justify-center items-center">
         <div className="h-[1.2em] relative font-awakening text-[5rem]">
@@ -22,10 +24,10 @@ export const menuItems: MenuItem[] = [
     id: getId(1),
     name: "ABOUT US",
     imgSrc: "",
-    href: "/about",
+    href: menuItemUrls[1],
     content: (
       <div>
-        <SlideHeader header="About" subHeader="Us" link="/about" />
+        <SlideHeader header="About" subHeader="Us" link={menuItemUrls[1]} />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
       </div>
     ),
@@ -34,10 +36,14 @@ export const menuItems: MenuItem[] = [
     id: getId(2),
     name: "SERVICES",
     imgSrc: "",
-    href: "/services",
+    href: menuItemUrls[2],
     content: (
       <div>
-        <SlideHeader header="Services" subHeader="We Offer" link="/services" />
+        <SlideHeader
+          header="Services"
+          subHeader="We Offer"
+          link={menuItemUrls[2]}
+        />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
       </div>
     ),
@@ -46,10 +52,10 @@ export const menuItems: MenuItem[] = [
     id: getId(3),
     name: "CONTACT US",
     imgSrc: "",
-    href: "/contact-us",
+    href: menuItemUrls[3],
     content: (
       <div>
-        <SlideHeader header="Contact" subHeader="Us" link="/contact-us" />
+        <SlideHeader header="Contact" subHeader="Us" link={menuItemUrls[3]} />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
       </div>
     ),
