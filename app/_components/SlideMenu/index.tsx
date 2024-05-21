@@ -19,7 +19,7 @@ export default function SlideMenu({
 
   return (
     <>
-      <div className="example max-w-[100dvw]">
+      <div className="max-w-[100dvw]">
         <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
           <ScrollMenu onWheel={onWheel}>
             {items.map(({ content, id }, i) => (

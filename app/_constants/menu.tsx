@@ -25,7 +25,7 @@ export const menuItems: MenuItem[] = [
     href: "/about",
     content: (
       <div>
-        <SlideHeader header="Services" subHeader="We Offer" />
+        <SlideHeader header="About" subHeader="Us" link="/about" />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
       </div>
     ),
@@ -37,7 +37,7 @@ export const menuItems: MenuItem[] = [
     href: "/services",
     content: (
       <div>
-        <SlideHeader header="Services" subHeader="We Offer" />
+        <SlideHeader header="Services" subHeader="We Offer" link="/services" />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
       </div>
     ),
@@ -49,7 +49,7 @@ export const menuItems: MenuItem[] = [
     href: "/contact-us",
     content: (
       <div>
-        <SlideHeader header="Services" subHeader="We Offer" />
+        <SlideHeader header="Contact" subHeader="Us" link="/contact-us" />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
       </div>
     ),

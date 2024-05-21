@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "@/app/_components/Icons";
+import Link from "next/link";
 
 export default function SlideHeader({
   header,
@@ -7,7 +8,7 @@ export default function SlideHeader({
 }: {
   header: string;
   subHeader?: string;
-  link?: string;
+  link: string;
 }) {
   return (
     <div className="flex justify-between w-full py-2 px-6">
@@ -15,12 +16,14 @@ export default function SlideHeader({
         <div className="text-white">{header}</div>
         <div className="text-gray-500">{subHeader}</div>
       </div>
-      <div className="flex justify-center items-center gap-2 text-gray-400 hover:bg-gray-800/50 hover:text-gray-300 transition-colors h-auto rounded-lg cursor-pointer px-4">
-        <div>View All</div>
-        <div>
-          <ArrowRightIcon />
+      <Link href={link}>
+        <div className="flex justify-center items-center gap-2 text-gray-400 hover:bg-gray-800/50 hover:text-gray-300 transition-colors h-auto rounded-lg cursor-pointer px-4 py-3">
+          <div>View All</div>
+          <div>
+            <ArrowRightIcon />
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
