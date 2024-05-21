@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { MenuProps } from "./types";
 
-export default function Menu({ items, activeMenuIndex }: MenuProps) {
+export default function NavBar({ items, activeMenuIndex }: MenuProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
   const [isInitial, setIsInitial] = useState<Boolean>(true);
 

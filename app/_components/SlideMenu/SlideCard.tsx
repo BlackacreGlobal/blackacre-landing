@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { VisibilityContext } from "react-horizontal-scrolling-menu";
 
-export default function Card({
+export default function SlideCard({
   itemId,
   children,
   nowVisible,

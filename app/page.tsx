@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Menu from "@/app/_components/Menu";
-import type { MenuItem } from "@/app/_components/Menu/types";
+import NavBar from "@/app/_components/NavBar";
+import type { MenuItem } from "@/app/_components/NavBar/types";
 import SlideMenu from "@/app/_components/SlideMenu";
 import SlideHeader from "@/app/_components/SlideMenu/SlideHeader";
 import { useState } from "react";
@@ -75,7 +75,7 @@ export default function Home() {
         <SlideMenu items={menuItems} setVisibleIndex={setActiveIndex} />
       </div>
       <div className="flex w-full justify-end items-end pb-[10vh] pr-[12vw]">
-        <Menu items={menuItems} activeMenuIndex={activeIndex} />
+        <NavBar items={menuItems} activeMenuIndex={activeIndex} />
       </div>
     </main>
   );

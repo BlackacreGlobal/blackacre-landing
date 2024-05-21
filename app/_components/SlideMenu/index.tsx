@@ -2,8 +2,8 @@ import React from "react";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import "react-horizontal-scrolling-menu/dist/styles.css";
 
-import type { MenuItem } from "../Menu/types";
-import Card from "../Card";
+import type { MenuItem } from "../NavBar/types";
+import SlideCard from "./SlideCard";
 import usePreventBodyScroll from "../usePreventBodyScroll";
 
 type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
@@ -23,7 +23,7 @@ export default function SlideMenu({
         <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
           <ScrollMenu onWheel={onWheel}>
             {items.map(({ content, id }, i) => (
-              <Card
+              <SlideCard
                 itemId={id} // NOTE: itemId is required for track items
                 key={id}
                 nowVisible={(_id) => {
@@ -31,7 +31,7 @@ export default function SlideMenu({
                 }}
               >
                 {content}
-              </Card>
+              </SlideCard>
             ))}
           </ScrollMenu>
         </div>
