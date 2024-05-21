@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 export default function NavBar({ items, activeMenuIndex }: MenuProps) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+  const [hoverIndex, setHoverIndex] = useState<number | null | undefined>(null);
   const [isInitial, setIsInitial] = useState<Boolean>(true);
   const [pathIndex, setPathIndex] = useState<number>(0);
   const pathname = usePathname();
