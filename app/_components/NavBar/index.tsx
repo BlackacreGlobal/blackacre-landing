@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 
 export default function NavBar({ items, activeMenuIndex }: MenuProps) {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [hoverIndex, setHoverIndex] = useState<number | null>(null);
   const [isInitial, setIsInitial] = useState<Boolean>(true);
   const [pathIndex, setPathIndex] = useState<number>(0);
   const pathname = usePathname();
@@ -17,7 +18,11 @@ export default function NavBar({ items, activeMenuIndex }: MenuProps) {
     if (isInitial && activeMenuIndex == items.length - 1) {
       setIsInitial(false);
     } else {
-      setActiveIndex(activeMenuIndex);
+      if (activeIndex !== activeMenuIndex) {
+        setHoverIndex(activeMenuIndex);
+      } else {
+        setHoverIndex(null);
+      }
     }
   }, [activeMenuIndex]);
 
@@ -27,6 +32,14 @@ export default function NavBar({ items, activeMenuIndex }: MenuProps) {
     setPathIndex(getPathIndex);
   }, [pathname]);
 
+  function onHoverOut() {
+    if (activeMenuIndex !== null && activeMenuIndex !== activeIndex) {
+      setHoverIndex(activeMenuIndex);
+    } else {
+      setHoverIndex(null);
+    }
+  }
+
   return (
     <nav className="w-fit flex">
       {items?.map((item, i) => (
@@ -34,13 +47,30 @@ export default function NavBar({ items, activeMenuIndex }: MenuProps) {
           key={i}
           href={item.href}
           className="group relative p-2 h-full w-full px-4"
-          onMouseEnter={() => setActiveIndex(i)}
-          onMouseLeave={() => setActiveIndex(pathIndex)}
+          onMouseEnter={() => setHoverIndex(i)}
+          onMouseLeave={onHoverOut}
         >
           <AnimatePresence>
             {activeIndex === i && (
               <motion.span
                 className="z-0 absolute inset-0 h-full w-full bg-slate-800/[0.6] block rounded-3xl border border-slate-700/50"
+                layoutId="activeBackground"
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                  transition: { duration: 0.15 },
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.15, delay: 0.2 },
+                }}
+              />
+            )}
+          </AnimatePresence>
+          <AnimatePresence>
+            {hoverIndex === i && (
+              <motion.span
+                className="z-0 absolute inset-0 h-full w-full block rounded-3xl border border-slate-700/50"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{

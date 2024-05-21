@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </div>
       <div className="bg-slate-900/75 border border-slate-500/20 backdrop-blur-[8px] p-3 rounded-full flex w-min justify-end items-end fixed bottom-[2rem] right-1/2 translate-x-1/2 shadow-md">
-        <NavBar items={menuItems} activeMenuIndex={0} />
+        <NavBar items={menuItems} />
       </div>
     </main>
   );
