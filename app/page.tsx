@@ -21,7 +21,7 @@ export default function Home() {
           sizes="12rem"
         />
       </div>
-      <div className="h-full flex-1">
+      <div id="carousel-parent" className="h-full flex-1">
         <SlideMenu items={menuItems} setVisibleIndex={setActiveIndex} />
       </div>
       <div className="flex w-full justify-end items-end pb-[10vh] pr-[12vw]">
