@@ -29,7 +29,11 @@ export const menuItems: MenuItem[] = [
     href: menuItemUrls[1],
     content: (
       <div>
-        <SlideHeader header="About" subHeader="Us" link={menuItemUrls[1]} />
+        <SlideHeader
+          header="Services"
+          subHeader="We Offer"
+          link={menuItemUrls[1]}
+        />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
       </div>
     ),
@@ -57,7 +61,11 @@ export const menuItems: MenuItem[] = [
     href: menuItemUrls[3],
     content: (
       <div>
-        <SlideHeader header="Contact" subHeader="Us" link={menuItemUrls[3]} />
+        <SlideHeader
+          header="Services"
+          subHeader="We Offer"
+          link={menuItemUrls[3]}
+        />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
       </div>
     ),

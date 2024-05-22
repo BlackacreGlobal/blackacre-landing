@@ -1,17 +1,16 @@
+"use client";
+
 import { useEffect, useState } from "react";
 
 export const useElementHeight = (idName: string) => {
-  // let element = document.getElementById(idName);
-  const [elementHeight, setElementHeight] = useState(getHeight());
-
-  function getHeight() {
-    const element = document.getElementById(idName);
-    return element ? element.getBoundingClientRect().height : 0;
-  }
+  const [elementHeight, setElementHeight] = useState(0);
 
   useEffect(() => {
     const element = document.getElementById(idName);
-    console.log("height", element, getHeight());
+    const getHeight = () => {
+      return element ? element.getBoundingClientRect().height : 0;
+    };
+    // const element = document.getElementById(idName);
     const handleResize = () => {
       if (element) {
         setElementHeight(getHeight());
