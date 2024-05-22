@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useElementHeight } from "@/app/_hooks/navigation";
 import AboutPart1 from "@/app/_components/About/AboutPart1";
@@ -9,6 +9,8 @@ import { ArrowDownIcon, ArrowUpIcon } from "@/app/_components/Icons";
 export default function VerticalCarousel({ }) {
   const parentHeight = useElementHeight("carousel-parent");
   const [currentPage, setCurrentPage] = useState(0);
+  const [showDownButton, setShowDownButton] = useState(true);
+  const [showUpButton, setShowUpButton] = useState(true);
   const totalPages = 3;
 
   const handleSwipe = (direction: string) => {
@@ -33,6 +35,19 @@ export default function VerticalCarousel({ }) {
   const handleButtonDOWN = () => {
     handleSwipe("Up");
   };
+
+  useEffect(() => {
+    if (currentPage === totalPages - 1) {
+      setShowDownButton(false);
+    } else {
+      setShowDownButton(true);
+    }
+    if (currentPage > 0) {
+      setShowUpButton(true);
+    } else {
+      setShowUpButton(false);
+    }
+  }, [currentPage]);
 
   return (
     <div
@@ -90,6 +105,7 @@ export default function VerticalCarousel({ }) {
           onClick={handleButtonUP}
           style={{
             margin: "0 auto",
+            visibility: showUpButton ? "visible" : "hidden",
           }}
         >
           <ArrowUpIcon className="size-8 text-slate-500" />
@@ -98,6 +114,7 @@ export default function VerticalCarousel({ }) {
           onClick={handleButtonDOWN}
           style={{
             margin: "0 auto",
+            visibility: showDownButton ? "visible" : "hidden",
           }}
         >
           <ArrowDownIcon className="size-12 text-slate-500" />
