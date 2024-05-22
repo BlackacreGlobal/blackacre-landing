@@ -24,3 +24,5 @@ export const ArrowRightIcon = React.forwardRef<SVGSVGElement, IconProps>(
     </svg>
   ),
 );
+
+ArrowRightIcon.displayName = "ArrowRightIcon";
