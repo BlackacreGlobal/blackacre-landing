@@ -16,7 +16,7 @@ export default function SlideCard({
 
   useEffect(() => {
     nowVisible(itemId);
-  }, [isVisible]);
+  }, [isVisible, itemId, nowVisible]);
 
   return (
     <div
