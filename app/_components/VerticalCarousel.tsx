@@ -4,6 +4,7 @@ import { useElementHeight } from "@/app/_hooks/navigation";
 import AboutPart1 from "@/app/_components/About/AboutPart1";
 import AboutPart2 from "@/app/_components/About/AboutPart2";
 import AboutPart3 from "@/app/_components/About/AboutPart3";
+import { ArrowDownIcon, ArrowUpIcon } from "@/app/_components/Icons";
 
 export default function VerticalCarousel({ }) {
   const parentHeight = useElementHeight("carousel-parent");
@@ -84,40 +85,24 @@ export default function VerticalCarousel({ }) {
           <AboutPart3 />
         </motion.div>
       </div>
-      <button
-        onClick={handleButtonUP}
-        style={{
-          position: "absolute",
-          top: 2,
-          left: 0,
-          right: 0,
-          margin: "0 auto",
-          height: 60,
-          width: 60,
-          borderRadius: 60,
-          opacity: 0.5,
-          transform: "scale(0.7)",
-        }}
-      >
-        BUTTON UP
-      </button>
-      <button
-        onClick={handleButtonDOWN}
-        style={{
-          position: "absolute",
-          bottom: 2,
-          left: 0,
-          right: 0,
-          margin: "0 auto",
-          height: 60,
-          width: 60,
-          borderRadius: 60,
-          opacity: 0.5,
-          transform: "scale(0.7)",
-        }}
-      >
-        BUTTON DOWN
-      </button>
+      <div className="bottom-0 right-0 left-0 absolute flex flex-col justify-center items-center">
+        <button
+          onClick={handleButtonUP}
+          style={{
+            margin: "0 auto",
+          }}
+        >
+          <ArrowUpIcon className="size-8 text-slate-500" />
+        </button>
+        <button
+          onClick={handleButtonDOWN}
+          style={{
+            margin: "0 auto",
+          }}
+        >
+          <ArrowDownIcon className="size-12 text-slate-500" />
+        </button>
+      </div>
     </div>
   );
 }

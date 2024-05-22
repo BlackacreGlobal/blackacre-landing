@@ -13,12 +13,12 @@ export default function Home() {
     <main className="flex min-h-screen w-full flex-col items-center h-full justify-start">
       <div className="h-[10rem] flex justify-center flex-1">
         <Image
-          className="object-contain max-w-[10rem] w-full h-auto"
+          className="object-contain max-w-[8rem] w-full h-auto"
           src="/images/logo.png"
           alt="BlackAcre logo"
           width={0}
           height={0}
-          sizes="12rem"
+          sizes="10rem"
         />
       </div>
       <div id="carousel-parent" className="h-full flex-1">
