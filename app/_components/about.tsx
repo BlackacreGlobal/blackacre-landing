@@ -6,7 +6,7 @@ export default function AboutPage({ }) {
       <div className="mb-6">
         <PageHeading heading="ABOUT" subHeading="US" />
       </div>
-      <div className="article-content text-slate-100 flex flex-col max-w-prose text-[18px] gap-6 mb-12">
+      <div className="article-content text-slate-100 flex flex-col max-w-prose text-[24px] gap-6 mb-12">
         <p>
           At Blackarce, we're not just another IT company – we're your trusted
           partner in navigating the digital landscape. With a relentless
@@ -30,11 +30,11 @@ export default function AboutPage({ }) {
         {/*     support every step of the way. */}
         {/*   </p> */}
         {/* </section> */}
-        {/* <p> */}
-        {/*   We're more than just a service provider – we're your strategic ally in */}
-        {/*   achieving your business objectives. Join us on this journey, and */}
-        {/*   together, let's unlock the full potential of your digital future. */}
-        {/* </p> */}
+        <p>
+          We're more than just a service provider – we're your strategic ally in
+          achieving your business objectives. Join us on this journey, and
+          together, let's unlock the full potential of your digital future.
+        </p>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import type { MenuItem } from "@/app/_components/NavBar/types";
 import SlideHeader from "@/app/_components/SlideMenu/SlideHeader";
+import AboutPage from "@/app/_components/about";
+import VerticalCarousel from "@/app/_components/VerticalCarousel";
 
 const elemPrefix = "test";
 const getId = (index: number) => `${elemPrefix}${index}`;
@@ -57,6 +59,18 @@ export const menuItems: MenuItem[] = [
       <div>
         <SlideHeader header="Contact" subHeader="Us" link={menuItemUrls[3]} />
         <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
+      </div>
+    ),
+  },
+  {
+    id: getId(4),
+    name: "CONTACT US",
+    imgSrc: "",
+    href: menuItemUrls[3],
+    content: (
+      <div>
+        {/* <AboutPage /> */}
+        <VerticalCarousel />
       </div>
     ),
   },
