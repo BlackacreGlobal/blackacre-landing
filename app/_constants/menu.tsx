@@ -1,7 +1,7 @@
 import type { MenuItem } from "@/app/_components/NavBar/types";
 import SlideHeader from "@/app/_components/SlideMenu/SlideHeader";
-import AboutPage from "@/app/_components/about";
 import VerticalCarousel from "@/app/_components/VerticalCarousel";
+import { AnimatePresence, motion } from "framer-motion";
 
 const elemPrefix = "test";
 const getId = (index: number) => `${elemPrefix}${index}`;
@@ -29,11 +29,13 @@ export const menuItems: MenuItem[] = [
     href: menuItemUrls[1],
     content: (
       <div>
-        <SlideHeader
-          header="Services"
-          subHeader="We Offer"
-          link={menuItemUrls[1]}
-        />
+        <AnimatePresence>
+          <SlideHeader
+            header="Services"
+            subHeader="We Offer"
+            link={menuItemUrls[1]}
+          />
+        </AnimatePresence>
         <div className="bg-slate-700 rounded-[1rem] w-full h-[25rem]"></div>
       </div>
     ),
@@ -45,11 +47,13 @@ export const menuItems: MenuItem[] = [
     href: menuItemUrls[2],
     content: (
       <div>
-        <SlideHeader
-          header="Services"
-          subHeader="We Offer"
-          link={menuItemUrls[2]}
-        />
+        <AnimatePresence>
+          <SlideHeader
+            header="Services"
+            subHeader="We Offer"
+            link={menuItemUrls[2]}
+          />
+        </AnimatePresence>
         <div className="bg-slate-700 rounded-[1rem] w-full h-[25rem]"></div>
       </div>
     ),
@@ -61,7 +65,6 @@ export const menuItems: MenuItem[] = [
     href: menuItemUrls[3],
     content: (
       <div>
-        {/* <AboutPage /> */}
         <VerticalCarousel />
       </div>
     ),

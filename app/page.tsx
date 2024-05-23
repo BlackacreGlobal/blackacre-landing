@@ -3,7 +3,7 @@
 import Image from "next/image";
 import NavBar from "@/app/_components/NavBar";
 import SlideMenu from "@/app/_components/SlideMenu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { menuItems } from "@/app/_constants/menu";
 import { motion } from "framer-motion";
 
