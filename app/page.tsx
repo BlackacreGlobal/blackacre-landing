@@ -10,14 +10,19 @@ import { motion } from "framer-motion";
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const variants = {
-    initial: { x: "0%", scale: 1 },
-    moved: { x: "20%", scale: 1.5 },
+    initial: { y: "0vh", scale: 1 },
+    moved: { y: "20vh", scale: 1.5 },
   };
 
   return (
     <main className="flex min-h-screen w-full flex-col items-center h-full justify-start">
       <div className="h-[20vh] pb-4 mb-8 flex-shrink-0 flex justify-end items-end">
-        <motion.div className="h-min">
+        <motion.div
+          className="h-min"
+          initial="initial"
+          animate={activeIndex === 0 ? "moved" : "initial"}
+          variants={variants}
+        >
           <Image
             className="object-contain max-w-[8rem] w-full h-auto"
             src="/images/logo.png"
@@ -25,11 +30,6 @@ export default function Home() {
             width={0}
             height={0}
             sizes={`${14}rem`}
-          // style={{
-          //   position: "absolute",
-          //   top: "20vh",
-          //   transform: "scale(1.5)",
-          // }}
           />
         </motion.div>
       </div>
