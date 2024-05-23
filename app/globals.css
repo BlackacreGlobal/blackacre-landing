@@ -35,7 +35,7 @@ body {
 }
 
 .react-horizontal-scrolling-menu--item:last-child {
-  margin-right: calc(10vw + 1rem);
+  margin-right: calc(10vw - 8px);
 }
 
 .react-horizontal-scrolling-menu--item {
@@ -49,6 +49,10 @@ body {
 .react-horizontal-scrolling-menu--scroll-container {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  height: 60vh !important;
+}
+
+.react-horizontal-scrolling-menu--wrapper {
 }
 
 .article-content p {

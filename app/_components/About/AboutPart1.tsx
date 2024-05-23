@@ -4,9 +4,6 @@ import AboutLayout from "./AboutLayout";
 export default function AboutPart1({ }) {
   return (
     <div className="w-full max-w-[64rem] flex flex-col items-center mx-auto">
-      <div className="mb-6">
-        <PageHeading heading="ABOUT" subHeading="US" />
-      </div>
       <AboutLayout>
         <p>
           At Blackarce, we're not just another IT company – we're your trusted

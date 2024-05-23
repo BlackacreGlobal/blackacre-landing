@@ -16,14 +16,14 @@ export default function SlideCard({
 
   useEffect(() => {
     nowVisible(itemId);
-  }, [isVisible, itemId, nowVisible]);
+  }, [isVisible]);
 
   return (
     <div
       tabIndex={0}
-      className="my-auto inline-block select-none w-[80vw] min-w-[20rem] mx-4"
+      className="my-auto inline-block select-none w-[80vw] min-w-[20rem] mx-4 h-full"
     >
-      <div className="h-max">{children}</div>
+      <div className="h-full">{children}</div>
     </div>
   );
 }
