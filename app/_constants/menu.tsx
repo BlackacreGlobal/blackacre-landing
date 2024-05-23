@@ -6,7 +6,7 @@ import VerticalCarousel from "@/app/_components/VerticalCarousel";
 const elemPrefix = "test";
 const getId = (index: number) => `${elemPrefix}${index}`;
 
-export const menuItemUrls = ["/", "/about", "/services", "/contact-us"];
+export const menuItemUrls = ["/", "/", "/", "/"];
 
 export const menuItems: MenuItem[] = [
   {
