@@ -12,10 +12,6 @@ export default function NavBar({ items, activeMenuIndex }: MenuProps) {
   const [pathIndex, setPathIndex] = useState<number>(0);
   const pathname = usePathname();
 
-  // useEffect(() => {
-  //
-  // }, [activeMenuIndex])
-
   useEffect(() => {
     const getPathIndex = menuItemUrls.indexOf(pathname);
     setActiveIndex(getPathIndex);

@@ -15,7 +15,7 @@ export const menuItems: MenuItem[] = [
     imgSrc: "",
     href: menuItemUrls[0],
     content: (
-      <div className="flex justify-center items-center">
+      <div className="h-full my-auto flex justify-center items-center">
         <div className="h-[1.2em] relative font-awakening text-[5rem]">
           REAL <span className="text-zinc-700">OF</span> TECHNOLOGY SOLUTIONS
         </div>
@@ -34,7 +34,7 @@ export const menuItems: MenuItem[] = [
           subHeader="We Offer"
           link={menuItemUrls[1]}
         />
-        <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
+        <div className="bg-slate-700 rounded-[1rem] w-full h-[25rem]"></div>
       </div>
     ),
   },
@@ -50,7 +50,7 @@ export const menuItems: MenuItem[] = [
           subHeader="We Offer"
           link={menuItemUrls[2]}
         />
-        <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
+        <div className="bg-slate-700 rounded-[1rem] w-full h-[25rem]"></div>
       </div>
     ),
   },
