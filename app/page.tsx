@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen w-full flex-col items-center h-full justify-start">
-      <div className="h-[10rem] flex justify-center flex-1">
+      <div className="h-[14rem] flex-shrink-0 flex justify-center flex-[2]">
         <Image
           className="object-contain max-w-[8rem] w-full h-auto"
           src="/images/logo.png"
@@ -24,7 +24,7 @@ export default function Home() {
       <div id="carousel-parent" className="h-full flex-1">
         <SlideMenu items={menuItems} setVisibleIndex={setActiveIndex} />
       </div>
-      <div className="flex w-full justify-end items-end pb-[10vh] pr-[12vw]">
+      <div className="flex w-full justify-end items-end pb-[2rem] pr-[12vw]">
         <NavBar items={menuItems} activeMenuIndex={activeIndex} />
       </div>
     </main>

@@ -61,22 +61,6 @@ export const menuItems: MenuItem[] = [
     href: menuItemUrls[3],
     content: (
       <div>
-        <SlideHeader
-          header="Services"
-          subHeader="We Offer"
-          link={menuItemUrls[3]}
-        />
-        <div className="bg-slate-700 rounded-[1rem] w-full h-[20rem]"></div>
-      </div>
-    ),
-  },
-  {
-    id: getId(4),
-    name: "CONTACT US",
-    imgSrc: "",
-    href: menuItemUrls[3],
-    content: (
-      <div>
         {/* <AboutPage /> */}
         <VerticalCarousel />
       </div>

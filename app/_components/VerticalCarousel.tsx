@@ -7,12 +7,14 @@ import AboutPart1 from "@/app/_components/About/AboutPart1";
 import AboutPart2 from "@/app/_components/About/AboutPart2";
 import AboutPart3 from "@/app/_components/About/AboutPart3";
 import { ArrowDownIcon, ArrowUpIcon } from "@/app/_components/Icons";
+import PageHeading from "./PageHeading";
 
 export default function VerticalCarousel({ }) {
   const parentHeight = useElementHeight("carousel-parent");
   const [currentPage, setCurrentPage] = useState(0);
   const [showDownButton, setShowDownButton] = useState(true);
   const [showUpButton, setShowUpButton] = useState(true);
+  const offsetHeight = 80;
   const totalPages = 3;
 
   const handleSwipe = (direction: string) => {
@@ -58,8 +60,11 @@ export default function VerticalCarousel({ }) {
         height: parentHeight,
       }}
     >
+      <div className="flex w-full justify-center items-center bg-black">
+        <PageHeading heading="ABOUT" subHeading="US" />
+      </div>
       <div
-        className="absolute top-0 left-0 h-full w-full"
+        className="absolute -top-[46px] left-0 h-full w-full"
         style={{
           transform: `translateY(-${currentPage * 100}%)`,
           transition: "transform 0.3s ease-in-out",
@@ -72,7 +77,8 @@ export default function VerticalCarousel({ }) {
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={0.2}
           style={{
-            height: parentHeight,
+            height: parentHeight - offsetHeight,
+            marginTop: offsetHeight,
           }}
         >
           <AboutPart1 />
@@ -84,7 +90,8 @@ export default function VerticalCarousel({ }) {
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={0.2}
           style={{
-            height: parentHeight,
+            height: parentHeight - offsetHeight,
+            marginTop: offsetHeight,
           }}
         >
           <AboutPart2 />
@@ -96,7 +103,8 @@ export default function VerticalCarousel({ }) {
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={0.2}
           style={{
-            height: parentHeight,
+            height: parentHeight - offsetHeight,
+            marginTop: offsetHeight,
           }}
         >
           <AboutPart3 />
