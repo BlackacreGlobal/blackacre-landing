@@ -24,7 +24,7 @@ export default function Home() {
       <div id="carousel-parent" className="h-full flex-1">
         <SlideMenu items={menuItems} setVisibleIndex={setActiveIndex} />
       </div>
-      <div className="flex w-full justify-end items-end pb-[2rem] pr-[12vw]">
+      <div className="flex w-full justify-center items-center mb-[3rem]">
         <NavBar items={menuItems} activeMenuIndex={activeIndex} />
       </div>
     </main>
