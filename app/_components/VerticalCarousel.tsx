@@ -14,7 +14,7 @@ export default function VerticalCarousel({ }) {
   const [currentPage, setCurrentPage] = useState(0);
   const [showDownButton, setShowDownButton] = useState(true);
   const [showUpButton, setShowUpButton] = useState(true);
-  const offsetHeight = 80;
+  const offsetHeight = 0;
   const totalPages = 3;
 
   const handleSwipe = (direction: string) => {
@@ -110,7 +110,7 @@ export default function VerticalCarousel({ }) {
           <AboutPart3 />
         </motion.div>
       </div>
-      <div className="bottom-0 right-0 left-0 absolute flex flex-col justify-center items-center">
+      <div className="bottom-[4rem] right-0 left-0 absolute flex flex-col justify-center items-center">
         <button
           onClick={handleButtonUP}
           style={{
