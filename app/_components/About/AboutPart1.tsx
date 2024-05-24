@@ -6,7 +6,7 @@ export default function AboutPart1({ }) {
     <div className="w-full max-w-[64rem] flex flex-col items-center mx-auto">
       <AboutLayout>
         <p>
-          At Blackarce, we're not just another IT company – we're your trusted
+          At Blackacre, we're not just another IT company – we're your trusted
           partner in navigating the digital landscape. With a relentless
           commitment to excellence, we strive to deliver innovative solutions
           tailored to meet your unique needs.
