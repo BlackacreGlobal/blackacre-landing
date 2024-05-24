@@ -17,7 +17,7 @@ export const menuItems: MenuItem[] = [
     content: (
       <div className="h-full my-auto flex justify-center items-center">
         <div className="h-[1.2em] relative font-awakening text-[5rem]">
-          REAL <span className="text-zinc-700">OF</span> TECHNOLOGY SOLUTIONS
+          REALM <span className="text-zinc-700">OF</span> TECHNOLOGY SOLUTIONS
         </div>
       </div>
     ),
