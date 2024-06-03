@@ -15,6 +15,12 @@ const awakening = localFont({
   variable: "--font-awakening",
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+})
+
 export const metadata: Metadata = {
   title: "BlackAcre",
   description: "BlackAcre Global",
@@ -27,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} ${awakening.variable}`}>
+      <body className={`${montserrat.className} ${awakening.variable} ${inter.variable}`}>
         {children}
       </body>
     </html>
