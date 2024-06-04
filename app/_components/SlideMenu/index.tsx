@@ -41,8 +41,6 @@ export default function SlideMenu({
   function setIndex(index: number) {
     setVisibleIndex(index);
     setActiveIndex(index);
-
-    // console.log("index", index);
   }
 
   return (
@@ -65,6 +63,7 @@ export default function SlideMenu({
               nowVisible={(_id) => {
                 setIndex(1);
               }}
+              width
             >
               <Content2 isActive={activeIndex === 1} />
             </SlideCard>
@@ -73,7 +72,7 @@ export default function SlideMenu({
               key={items[2].id}
               nowVisible={(_id) => {
                 setIndex(2);
-              }} 
+              }}
               width
             >
               <Content3 />
@@ -96,12 +95,11 @@ export default function SlideMenu({
 }
 
 function Content3() {
-  // if there is more in future than the logic will be change then
   return (
     <div>
       <div className="relative h-[817px] overflow-hidden">
         <div className="flex items-center justify-center text-center w-full bg-black">
-          <PageHeading heading="Contact" subHeading="Us" />
+          <PageHeading heading="Contact" subHeading="US" />
         </div>
         <div className="absolute left-0 h-full w-full">
           <div className="flex justify-center items-center text-center">
@@ -118,7 +116,7 @@ function Content3() {
 function Content1() {
   return (
     <div className="h-full my-auto flex justify-center items-center">
-      <div className="h-[1.2em] relative font-inter font-extrabold text-[5rem]">
+      <div className="md:h-[1.2em] relative font-inter font-extrabold md:text-[5rem] text-[3.5rem]">
         Maker <span className="text-zinc-700">of</span> Many Memories™
       </div>
     </div>
@@ -127,8 +125,8 @@ function Content1() {
 
 function Content2({ isActive }: { isActive: Boolean }) {
   return (
-    <div className="flex justify-center flex-col w-full">
-      <div className="h-[4rem]">
+    <div className="flex justify-center flex-col items-center">
+      <div className="h-[4rem] w-full max-w-[1015px]">
         <AnimatePresence>
           {isActive && (
             <motion.div
@@ -146,11 +144,11 @@ function Content2({ isActive }: { isActive: Boolean }) {
         </AnimatePresence>
       </div>
 
-      <div className="bg-[#D9D9D999] backdrop-blur-[2px] w-full grid grid-cols-4 py-[90px] px-[47px] gap-y-4 rounded-[1rem] h-[25rem]">
+      <div className="bg-[#D9D9D999] backdrop-blur-[2px] w-full grid max-w-[1015px] lg:grid-cols-4 grid-cols-2 md:py-[90px] py-[40px] px-[47px] gap-x-4 gap-y-4 rounded-[1rem]">
         {dummyData.map((data: any, idx: number) => (
           <div
             key={idx}
-            className="min-h-[213px] max-w-[213px] bg-white rounded-md"
+            className="lg:min-h-[213px] min-h-[140px] max-w-[180px] md:max-w-[213px] bg-white rounded-md"
           ></div>
         ))}
       </div>

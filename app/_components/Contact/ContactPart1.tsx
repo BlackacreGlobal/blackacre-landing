@@ -1,20 +1,42 @@
 import React from "react";
 import ContactLayout from "./ContactLayout";
 
+const row = "flex md:gap-3 gap-6 w-full max-lg:flex-col";
+const input =
+  "md:p-[26px] rounded-lg md:h-[20px] p-[14px] h-[43px] bg-transparent border-[1px] border-[#E2E8F0] max-md:max-w-[330px] outline-white outline-8 outline-offset-[5px]";
+
 const ContactPart1 = () => {
   return (
     <div className="w-full max-w-[64rem] flex flex-col items-center mx-auto">
       <ContactLayout>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere nulla
-        nostrum voluptates illum molestiae necessitatibus tenetur quisquam
-        nesciunt autem officiis quia nihil at voluptas, officia harum nemo unde
-        neque dolore consequatur ullam dicta consectetur! Similique reiciendis
-        adipisci, dignissimos dolore minima rerum doloremque labore sequi
-        tempore quos repellendus, error ipsum repudiandae temporibus inventore
-        voluptatibus amet eaque cupiditate at. Perferendis hic, vitae quis
-        provident quisquam tempora sed dolores repellat aspernatur, iusto
-        corrupti.
+        <div className={row}>
+          <input type="text" className={input} placeholder="First Name" />
+          <input type="text" className={input} placeholder="Last Name" />
+        </div>
+        <div className="w-full max-w-[777px]">
+          <input
+            type="text"
+            className={`${input} w-full`}
+            placeholder="Email Address"
+          />
+        </div>
+        <div className="w-full max-w-[777px]">
+          <input
+            type="text"
+            className={`${input} w-full`}
+            placeholder="Address"
+          />
+        </div>
+        <div className="w-full max-w-[777px] min-h-[101px]">
+          <textarea
+            className="w-full max-w-[777px] bg-transparent border-[1px] border-[#E2E8F0] p-3 min-h-[101px] rounded-lg resize-y outline-white outline-8 outline-offset-[5px]"
+            placeholder="Message"
+          ></textarea>
+        </div>
       </ContactLayout>
+      <button className="w-full px-6 max-w-[102px] py-2 bg-[#161616] mt-3 rounded-md hover:bg-indigo-400 font-inter font-medium transition duration-300 ease-in-out transform hover:scale-105">
+        Submit
+      </button>
     </div>
   );
 };
