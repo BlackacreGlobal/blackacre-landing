@@ -24,7 +24,7 @@ export default function SlideCard({
     <div
       tabIndex={0}
       className={`my-auto inline-block select-none ${
-        width ? " w-[100vw] " : " w-[80vw] "
+        width ? " w-[96vw] " : " w-[80vw] "
       }  min-w-[20rem] mx-4 h-full`}
     >
       <div className="h-full">{children}</div>

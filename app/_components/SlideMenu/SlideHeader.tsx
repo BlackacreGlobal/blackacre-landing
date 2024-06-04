@@ -13,7 +13,7 @@ export default function SlideHeader({
   return (
     <div className="flex justify-between w-full py-2 px-6">
       <div className="flex gap-2">
-        <div className="text-white font-inter font-bold text-[56px] leading-8">{header}</div>
+        <div className="text-white font-inter font-bold md:text-[56px] text-[32px] text-start leading-8">{header}</div>
         <div className="text-gray-500">{subHeader}</div>
       </div>
       {/* <Link href={link}>

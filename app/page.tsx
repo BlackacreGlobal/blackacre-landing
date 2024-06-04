@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen w-full flex-col items-center h-full justify-start">
-      <div className="h-[20vh] pb-4 mb-8 flex-shrink-0 flex justify-end items-end">
+      <div className="h-[20vh] pb-4 md:mb-8 mb-4 flex-shrink-0 flex justify-end items-end">
         <motion.div
           className="h-min"
           initial="initial"
@@ -36,7 +36,7 @@ export default function Home() {
       <div id="carousel-parent" className="flex-1">
         <SlideMenu items={menuItems} setVisibleIndex={setActiveIndex} />
       </div>
-      <div className="flex w-full justify-center items-center mb-[3rem]">
+      <div className="flex w-full justify-center items-center md:mb-[3rem]">
         <NavBar items={menuItems} activeMenuIndex={activeIndex} />
       </div>
     </main>

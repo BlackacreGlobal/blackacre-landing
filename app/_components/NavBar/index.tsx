@@ -25,7 +25,7 @@ export default function NavBar({ items, activeMenuIndex }: MenuProps) {
   }
 
   return (
-    <nav className="w-fit flex">
+    <nav className="w-fit flex max-md:flex-wrap">
       {items?.map((item, i) => (
         <Link
           key={i}
