@@ -16,6 +16,7 @@ const config: Config = {
       fontFamily: {
         awakening: ["var(--font-awakening)"],
         sans: ["var(--font-montserrat)"],
+        inter: ["var(--font-inter)"],
       },
     },
   },

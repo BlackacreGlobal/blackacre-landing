@@ -12,18 +12,18 @@ export default function SlideHeader({
 }) {
   return (
     <div className="flex justify-between w-full py-2 px-6">
-      <div className="flex gap-2 font-awakening text-[2rem]">
-        <div className="text-white">{header}</div>
+      <div className="flex gap-2">
+        <div className="text-white font-inter font-bold text-[56px] leading-8">{header}</div>
         <div className="text-gray-500">{subHeader}</div>
       </div>
-      <Link href={link}>
+      {/* <Link href={link}>
         <div className="flex justify-center items-center gap-2 text-gray-400 hover:bg-gray-800/50 hover:text-gray-300 transition-colors h-auto rounded-lg cursor-pointer px-4 py-3">
           <div>View All</div>
           <div>
             <ArrowRightIcon />
           </div>
         </div>
-      </Link>
+      </Link> */}
     </div>
   );
 }
