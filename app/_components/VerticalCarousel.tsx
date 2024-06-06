@@ -64,7 +64,7 @@ export default function VerticalCarousel({ }) {
         <PageHeading heading="ABOUT" subHeading="US" />
       </div>
       <div
-        className="absolute md:-top-[46px] top-[120px] left-0 h-full w-full"
+        className="absolute md:-top-[46px] left-0 h-full w-full"
         style={{
           transform: `translateY(-${currentPage * 100}%)`,
           transition: "transform 0.3s ease-in-out",
