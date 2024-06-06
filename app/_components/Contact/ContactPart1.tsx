@@ -3,7 +3,7 @@ import ContactLayout from "./ContactLayout";
 
 const row = "flex md:gap-3 gap-6 w-full max-lg:flex-col";
 const input =
-  "md:p-[26px] rounded-lg md:h-[20px] p-[14px] h-[43px] bg-transparent border-[1px] border-[#E2E8F0] max-md:max-w-[330px] outline-white outline-8 outline-offset-[5px]";
+  "md:p-[26px] rounded-lg md:h-[20px] p-[14px] h-[43px] bg-transparent border-[1px] border-[#E2E8F0] max-md:max-w-[310px] outline-white outline-8 outline-offset-[5px]";
 
 const ContactPart1 = () => {
   return (

@@ -75,7 +75,7 @@ export default function SlideMenu({
               }}
               width
             >
-              <Content3 />
+              <Content4 />
             </SlideCard>
 
             <SlideCard
@@ -85,7 +85,7 @@ export default function SlideMenu({
                 setIndex(3);
               }}
             >
-              <Content4 />
+              <Content3 />
             </SlideCard>
           </ScrollMenu>
         </div>
