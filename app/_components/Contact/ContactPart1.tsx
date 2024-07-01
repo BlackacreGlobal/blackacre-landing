@@ -7,7 +7,7 @@ const input =
 
 const ContactPart1 = () => {
   return (
-    <div className="w-full max-w-[64rem] flex flex-col items-center mx-auto">
+    <div className="w-full max-w-[64rem] flex flex-col h-[500px] overflow-auto items-center mx-auto">
       <ContactLayout>
         <div className={row}>
           <input type="text" className={input} placeholder="First Name" />

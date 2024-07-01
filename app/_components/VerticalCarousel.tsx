@@ -83,7 +83,7 @@ export default function VerticalCarousel({ }) {
         >
           <AboutPart1 />
         </motion.div>
-        <motion.div
+        {/* <motion.div
           key={1}
           className="flex justify-center items-center text-center"
           drag="y"
@@ -108,9 +108,9 @@ export default function VerticalCarousel({ }) {
           }}
         >
           <AboutPart3 />
-        </motion.div>
+        </motion.div> */}
       </div>
-      <div className="bottom-[6rem] right-0 left-0 absolute flex flex-col justify-center items-center">
+      {/* <div className="bottom-[6rem] right-0 left-0 absolute flex flex-col justify-center items-center">
         <button
           onClick={handleButtonUP}
           style={{
@@ -129,7 +129,7 @@ export default function VerticalCarousel({ }) {
         >
           <ArrowDownIcon className="size-12 text-slate-500" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
