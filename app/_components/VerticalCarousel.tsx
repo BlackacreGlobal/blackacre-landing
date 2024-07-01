@@ -110,7 +110,7 @@ export default function VerticalCarousel({ }) {
           <AboutPart3 />
         </motion.div>
       </div>
-      <div className="bottom-[4rem] right-0 left-0 absolute flex flex-col justify-center items-center">
+      <div className="bottom-[6rem] right-0 left-0 absolute flex flex-col justify-center items-center">
         <button
           onClick={handleButtonUP}
           style={{
