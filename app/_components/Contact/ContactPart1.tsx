@@ -34,7 +34,7 @@ const ContactPart1 = () => {
           ></textarea>
         </div>
       </ContactLayout>
-      <button className="w-full px-6 max-w-[102px] py-2 bg-[#161616] mt-3 rounded-md hover:bg-indigo-400 font-inter font-medium transition duration-300 ease-in-out transform hover:scale-105">
+      <button className="w-full px-6 max-w-[102px] py-2 bg-[#161616] mt-3 rounded-md hover:bg-white hover:text-black text-slate-400 font-inter font-medium transition duration-300 ease-in-out transform hover:scale-105">
         Submit
       </button>
     </div>

@@ -61,7 +61,7 @@ export default function VerticalCarousel({ }) {
       }}
     >
       <div className="flex w-full justify-center items-center bg-black">
-        <PageHeading heading="ABOUT" subHeading="US" />
+        <PageHeading heading="" subHeading="" />
       </div>
       <div
         className="absolute md:-top-[46px] left-0 h-full w-full"
