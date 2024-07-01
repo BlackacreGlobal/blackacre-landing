@@ -24,7 +24,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: getId(1),
-    name: "ABOUT US",
+    name: "",
     imgSrc: "",
     href: menuItemUrls[1],
     content: (
