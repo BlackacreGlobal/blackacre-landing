@@ -97,9 +97,9 @@ export default function SlideMenu({
 function Content3() {
   return (
     <div>
-      <div className="relative h-[817px] overflow-hidden">
+      <div className="relative h-[817px] mt-10 overflow-hidden">
         <div className="flex items-center justify-center text-center w-full bg-black">
-          <PageHeading heading="Contact" subHeading="US" />
+          <PageHeading heading="" subHeading="" />
         </div>
         <div className="absolute left-0 h-full w-full">
           <div className="flex justify-center items-center text-center">
