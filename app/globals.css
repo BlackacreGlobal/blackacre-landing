@@ -27,6 +27,12 @@ body {
   margin-left: calc(10vw + 1rem);
 }
 
+@media screen and (max-width: 768px) {
+  .react-horizontal-scrolling-menu--item:first-child {
+    margin-left: calc(10vw + -0.4rem);
+  }
+}
+
 .react-horizontal-scrolling-menu--item:last-child {
   margin-right: calc(10vw - 8px);
 }
